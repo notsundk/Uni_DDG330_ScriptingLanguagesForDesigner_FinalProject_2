@@ -5,24 +5,31 @@ using UnityEngine;
 public class Suicide : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private GameObject _suicideLine;
     [SerializeField] private float _dirX;
     [SerializeField] private float _moveSpeed;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _suicideLine = GameObject.Find("SuicideLine");
     }
 
     void Update()
     {
-        if (transform.position.x <= 0)
+        if (transform.position.y <= _suicideLine.transform.position.y)
         {
-            _dirX = -1;
-        }
+            if (transform.position.x <= 0)
+            {
+                _dirX = -1;
+                Debug.Log("Go Left");
+            }
 
-        if (transform.position.x >= 0)
-        {
-            _dirX = 1;
+            if (transform.position.x >= 0)
+            {
+                _dirX = 1;
+                Debug.Log("Go Right");
+            }
         }
     }
 

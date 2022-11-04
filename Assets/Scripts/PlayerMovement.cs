@@ -15,15 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-        {
-            _dirX = -1;
-        }
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+            _dirX = Input.acceleration.x;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-        {
-            _dirX = 1;
-        }
+        if (SystemInfo.deviceType == DeviceType.Desktop)
+            _dirX = Input.GetAxis("Horizontal");
     }
 
     void FixedUpdate()
