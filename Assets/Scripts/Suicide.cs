@@ -9,13 +9,13 @@ public class Suicide : MonoBehaviour
     [SerializeField] private float _dirX;
     [SerializeField] private float _moveSpeed;
 
-    void Start()
+    private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _suicideLine = GameObject.Find("SuicideLine");
     }
 
-    void Update()
+    private void Update()
     {
         if (transform.position.y <= _suicideLine.transform.position.y)
         {
@@ -33,7 +33,7 @@ public class Suicide : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         _rb.velocity = new Vector2(_dirX * _moveSpeed, 0f);
     }

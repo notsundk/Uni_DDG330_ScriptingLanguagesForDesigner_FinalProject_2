@@ -8,12 +8,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _dirX;
     [SerializeField] private float _moveSpeed;
 
-    void Start()
+    private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
         if (SystemInfo.deviceType == DeviceType.Handheld)
             _dirX = Input.acceleration.x;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
             _dirX = Input.GetAxis("Horizontal");
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         _rb.velocity = new Vector2(_dirX * _moveSpeed, 0f);
     }
