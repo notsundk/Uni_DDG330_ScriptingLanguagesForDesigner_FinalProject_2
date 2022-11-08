@@ -6,6 +6,7 @@ public class ScoreTrigger : MonoBehaviour
 {
     [SerializeField] private GameManager _gm;
     [SerializeField] private GameObject _parentGO;
+    [SerializeField] private float _deathDelay;
 
     private void Start()
     {
@@ -16,8 +17,14 @@ public class ScoreTrigger : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            _gm.IncreaseScore(1);
-            Destroy(_parentGO);
+            StartCoroutine(DelayDeath(_deathDelay));
         }
+    }
+
+    private IEnumerator DelayDeath(float interval)
+    {
+        yield return new WaitForSeconds(interval);
+        Destroy(_parentGO);
+        _gm.IncreaseScore(1);
     }
 }

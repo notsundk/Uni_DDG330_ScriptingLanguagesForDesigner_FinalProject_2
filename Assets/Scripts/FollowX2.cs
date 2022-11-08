@@ -10,6 +10,6 @@ public class FollowX2 : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector2(Target.transform.position.x + OffsetX * PlayerMovement.ExposeDirX(), transform.position.y);
+        transform.position = new Vector3(Target.transform.position.x + OffsetX * PlayerMovement.ExposeDirX(), transform.position.y, transform.position.z);
     }
 }

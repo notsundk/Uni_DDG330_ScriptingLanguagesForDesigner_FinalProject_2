@@ -9,13 +9,13 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(spawnEnemy(_spawnInterval, _slimeEnemy));
+        StartCoroutine(SpawnEnemy(_spawnInterval, _slimeEnemy));
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject enemy)
+    private IEnumerator SpawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
         GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy));
+        StartCoroutine(SpawnEnemy(interval, enemy));
     }
 }

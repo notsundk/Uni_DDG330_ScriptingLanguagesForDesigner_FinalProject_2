@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gm: {fileID: 0}
   _parentGO: {fileID: 8448599720665628505}
+  _deathDelay: 0.3
 --- !u!212 &304979455976461366
 SpriteRenderer:
   m_ObjectHideFlags: 0
