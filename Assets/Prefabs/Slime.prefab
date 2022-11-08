@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7677035568066517528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8448599720665628325}
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7677035568066517528}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -312,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 8448599720665628505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.43, y: 7.64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5695809245753165164}
@@ -430,11 +430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.37249422
+      value: 0.37249756
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.2537818
+      value: 0.25378036
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -442,11 +442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.2799898
+      value: 1.2799903
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027367, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Color.b
-      value: 0.4481132
+      value: 0.9051806
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027367, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Color.g
@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027367, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Color.r
-      value: 0.66664284
+      value: 0.6179246
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027367, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_SortingOrder
