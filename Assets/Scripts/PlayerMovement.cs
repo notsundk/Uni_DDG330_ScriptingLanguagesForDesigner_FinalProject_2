@@ -26,4 +26,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb.velocity = new Vector2(_dirX * _moveSpeed, 0f);
     }
+
+    public float ExposeDirX()
+    {
+        return _dirX;
+    }
 }
