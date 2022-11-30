@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8280126671126460183}
   m_Layer: 6
   m_Name: ScoreTriggerCollider
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,7 +388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4194224517450027361, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Name
-      value: CircleStiff
+      value: SoftBody_CircleStiff
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027364, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_RootOrder

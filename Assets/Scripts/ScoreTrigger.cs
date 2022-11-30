@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// On All Enemies
+
 public class ScoreTrigger : MonoBehaviour
 {
     [SerializeField] private GameManager _gm;
@@ -15,9 +17,16 @@ public class ScoreTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Player") // If Collide with Player
         {
             StartCoroutine(DelayDeath(_deathDelay));
+            _gm.IncreaseScore(1);
+        }
+
+        if (collision.tag == "Floor") // If Collide with Floor
+        {
+            StartCoroutine(DelayDeath(_deathDelay));
+            // No Score
         }
     }
 
@@ -25,6 +34,5 @@ public class ScoreTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(interval);
         Destroy(_parentGO);
-        _gm.IncreaseScore(1);
     }
 }
