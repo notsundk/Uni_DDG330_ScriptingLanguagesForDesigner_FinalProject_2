@@ -294,7 +294,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8448599720665628325}
-  - component: {fileID: 8448599720665628324}
   - component: {fileID: 8448599720665628327}
   - component: {fileID: 8448599720665628326}
   m_Layer: 0
@@ -321,22 +320,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8448599720665628324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8448599720665628505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd347d818e9d2a040b20487e467bdaee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 8448599720665628327}
-  _suicideLine: {fileID: 0}
-  _dirX: 0
-  _moveSpeed: 5
 --- !u!50 &8448599720665628327
 Rigidbody2D:
   serializedVersion: 4
@@ -352,12 +335,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 0.5
+  m_Material: {fileID: 6200000, guid: bcaf0059318b2cd47b10341cd310ed2e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &8448599720665628326
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -383,7 +366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4194224517450027361, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_Name
-      value: CircleStiff
+      value: SoftBody_CircleStiff
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027364, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_RootOrder
@@ -427,6 +410,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027364, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
+      propertyPath: m_AutoRebind
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4194224517450027366, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}

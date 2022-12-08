@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainmenuSlimeJuice : MonoBehaviour
+public class MainMenuJuicer : MonoBehaviour
 {
     public Transform Player;
     public Transform TeleportTarget;
