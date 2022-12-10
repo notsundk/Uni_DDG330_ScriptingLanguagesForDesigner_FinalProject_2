@@ -24,14 +24,15 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnEnemy(_initialSpawnInterval, _objectToSpawn));
     }
 
-    private IEnumerator SpawnEnemy(float interval, GameObject objeect)
+    private IEnumerator SpawnEnemy(float interval, GameObject newObject)
     {
+        // WAIT FOR INTERVAL, THEN SPAWN OBJECT
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(objeect, transform.position, Quaternion.identity);
+        Instantiate(newObject, transform.position, Quaternion.identity);
 
         // START NEXT COROUTINE
         _curSpawnInterval = Random.Range(_minSpawnInterval, _maxSpawnInterval);
         interval = _curSpawnInterval;
-        StartCoroutine(SpawnEnemy(interval, objeect));
+        StartCoroutine(SpawnEnemy(interval, newObject));
     }
 }
