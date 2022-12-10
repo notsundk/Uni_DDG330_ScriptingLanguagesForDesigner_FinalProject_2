@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButton : MonoBehaviour
 {
+    [Header ("Start Button Stuff")]
     public Image StartButtonImage;
     public Sprite ButtonDefault;
     public Sprite ButtonPressed;
@@ -31,6 +32,13 @@ public class MainMenuButton : MonoBehaviour
 
     private void LoadScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainLevel");
+    }
+
+    ////////////////////////////////////////////////////////
+
+    public void ResetHighscore()
+    {
+        PlayerPrefs.SetInt("BestScore", 0);
     }
 }

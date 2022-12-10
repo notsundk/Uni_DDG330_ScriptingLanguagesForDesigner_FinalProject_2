@@ -47,6 +47,12 @@ public class ScoreTrigger : MonoBehaviour
             StartCoroutine(DestroyInstruction(_delayBeforeDestroyScript));
             // No Score
         }
+
+        if (collision.tag == "Lava") // If Collide with Lava
+        {
+            StartCoroutine(DestroyInstruction(0));
+            // No Score
+        }
     }
 
     private IEnumerator DestroyInstruction(float interval)

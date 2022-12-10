@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         if (Time_Cur <= 0)
         {
             // ENDSCREEN OVERLAY + PAUSE
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f; // TIME SCALE BREAKS SCENE LOADING
             Canvas_Gameplay.SetActive(false);
             Canvas_Endscreen.SetActive(true);
 
