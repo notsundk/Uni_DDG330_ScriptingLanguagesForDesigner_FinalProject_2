@@ -7,28 +7,31 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _slimeEnemy;
+    [Header("Object Setting")]
+    [SerializeField] private GameObject _objectToSpawn;
 
     [Header("Spawn Setting")]
     [SerializeField] private float _initialSpawnInterval;
     [SerializeField] private float _minSpawnInterval;
     [SerializeField] private float _maxSpawnInterval;
+
+    [Header("Debug Tool")]
     [SerializeField] private float _curSpawnInterval;
 
     private void Start()
     {
         // INITIAL COROUTINE START
-        StartCoroutine(SpawnEnemy(_initialSpawnInterval, _slimeEnemy));
+        StartCoroutine(SpawnEnemy(_initialSpawnInterval, _objectToSpawn));
     }
 
-    private IEnumerator SpawnEnemy(float interval, GameObject enemy)
+    private IEnumerator SpawnEnemy(float interval, GameObject objeect)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
+        GameObject newEnemy = Instantiate(objeect, transform.position, Quaternion.identity);
 
         // START NEXT COROUTINE
         _curSpawnInterval = Random.Range(_minSpawnInterval, _maxSpawnInterval);
         interval = _curSpawnInterval;
-        StartCoroutine(SpawnEnemy(interval, enemy));
+        StartCoroutine(SpawnEnemy(interval, objeect));
     }
 }
