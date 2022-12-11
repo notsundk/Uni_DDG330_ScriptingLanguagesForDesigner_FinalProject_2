@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 8448599720665628325}
   - component: {fileID: 8448599720665628327}
   - component: {fileID: 8448599720665628326}
+  - component: {fileID: 3182104194741135189}
   m_Layer: 8
   m_Name: SlimeV2
   m_TagString: Untagged
@@ -364,6 +365,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &3182104194741135189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448599720665628505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99600fd20fc1b9e459ea220a62449351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteRend: {fileID: 5695809245753165167}
 --- !u!1001 &8448599720256279560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,6 +531,11 @@ Transform:
 --- !u!4 &5695809245753165164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4194224517450027364, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
+  m_PrefabInstance: {fileID: 8448599720256279560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5695809245753165167 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4194224517450027367, guid: 074c70633b0f5bb4d823d7c5cbaa7a6f, type: 3}
   m_PrefabInstance: {fileID: 8448599720256279560}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5695809246425754860 stripped
