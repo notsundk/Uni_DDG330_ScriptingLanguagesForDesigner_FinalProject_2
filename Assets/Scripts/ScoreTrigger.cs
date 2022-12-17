@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 // On All Enemies
@@ -21,6 +22,11 @@ public class ScoreTrigger : MonoBehaviour
     [SerializeField] private float yDef;
     [SerializeField] private float zDef;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource Death;
+    [SerializeField] private AudioSource Combine;
+    [SerializeField] private AudioSource Point;
+
     private void Start()
     {
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -40,17 +46,21 @@ public class ScoreTrigger : MonoBehaviour
         {
             StartCoroutine(DestroyInstruction(_delayBeforeDestroyScript));
             _gm.IncreaseScore(1);
+            Point.Play();
+            Combine.Play();
         }
 
         if (collision.tag == "Floor") // If Collide with Floor
         {
             StartCoroutine(DestroyInstruction(_delayBeforeDestroyScript));
+            Death.Play();
             // No Score
         }
 
         if (collision.tag == "Lava") // If Collide with Lava
         {
             StartCoroutine(DestroyInstruction(0));
+            Death.Play();
             // No Score
         }
     }
